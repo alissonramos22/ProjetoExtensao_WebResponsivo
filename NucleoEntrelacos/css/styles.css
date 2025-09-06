@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #1B213B;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 1000;
+    background-color: #1B213B;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.header img {
+    width: 100%;
+    height: fit-content;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #FFFFFF, #999999);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 2rem;
+}
+
+.menu {
+    background: linear-gradient(to right, #FFFFFF, #999999);
+    height: 4rem;
+    width: 90%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+    .menu-item{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: medium;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menu-item{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: small;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        white-space: nowrap;
+    }
+}
+
+
+.menu-item:hover{
+    color: #ffff;
+    background-color: #1B213B;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 15rem);
+    margin-top: 13rem;
+
+    scrollbar-color: #EB8EE8 #1B213B;
+    scrollbar-width: thin;
+
+}
+
+.content-box {
+    background: linear-gradient(to bottom,#1B203B,#EB8EE8);
+    width: 90%;
+    height: calc(100vh - 15rem);
+    min-height: calc(100vh - 15rem);
+    border-radius: 2rem;
+}
+
+#home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#home div{
+    padding: 1rem;
+}
+
+#home_titulo{
+    font-size:x-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px #000;
+    color:#ffff;
+    text-align: center;
+}
+
+#home_text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size:small;
+    text-align:justify;
+}
+
+#home img {
+    background-color: #999999;
+    height: 2rem;
+    width: 100%;
+    margin: 1rem;
+}
