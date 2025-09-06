@@ -12,7 +12,7 @@
     <div class="header">
         <img src="assets/img/Logo.png">
         <div class="menu">
-            <div class="menu-item" box="home">Home</div>
+            <div class="menu-item selected-menu" box="home">Home</div>
             <div class="menu-item" box="equipe">Conheça nossa Equipe</div>
             <div class="menu-item" box="neurodivergentes">Neurodivergentes</div>
             <div class="menu-item" box="depoimentos">Depoimentos</div>
@@ -34,21 +34,21 @@
         </div>
         <div class="content-box" id="equipe">
             <div class="content-equipe">
-                <div class="person">
+                <div class="person selected" person="one">
                     <img class="person-picture" src="assets/img/dummyimg.png"/>
                     <div class="person-text">
                         <p class="person-title">Nome Sobrenome Sobrenome</p>
                         <p class="person-subtitle">Formação</p>
                     </div>
                 </div>
-                <div class="person">
+                <div class="person" person="two">
                     <img class="person-picture" src="assets/img/dummyimg.png"/>
                     <div class="person-text">
                         <p class="person-title">Nome Sobrenome Sobrenome</p>
                         <p class="person-subtitle">Formação</p>
                     </div>
                 </div>
-                <div class="person">
+                <div class="person" person="three">
                     <img class="person-picture" src="assets/img/dummyimg.png"/>
                     <div class="person-text">
                         <p class="person-title">Nome Sobrenome Sobrenome</p>
@@ -57,11 +57,115 @@
                 </div>
             </div>
             <div class="content-equipe-detail">
-                
+                <div class="content-detail">
+                    <div class="person-detail" id="one">1 - Incluir aqui todos os dados conforme a pessoa selecionada</div>
+                    <div class="person-detail hidden" id="two">2 - apresentando aqui os dados baseados na pessoa</div>
+                    <div class="person-detail hidden" id="three">3 - outros dados aqui</div>
+                </div>
             </div>
         </div>
         <div class="content-box" id="neurodivergentes">
-            Neurodivergentes
+            <div class="submenu">
+                <div class="submenu-item selected-menu" section="oquee">O que é</div>
+                <div class="submenu-item" section="autismo">Autismo (TEA)</div>
+                <div class="submenu-item" section="tdah">TDAH</div>
+                <div class="submenu-item" section="dislexia">Dislexia</div>
+                <div class="submenu-item" section="tod">TOD</div>
+            </div>
+            <div class="content-sections">
+                <div class="section" id="oquee">
+                    <div class="section-text">
+                        <div class="section-title">O que é</div>
+                        <p>Neurodiversidades refere-se à variada composição 
+                        neurológica de todos os seres humanos, que inclui não 
+                        apenas as diferenças entre indivíduos, mas também o 
+                        conceito de que estas são variações naturais em vez 
+                        de patologias. Este conceito, popularizado pela 
+                        socióloga Judy Singer, abrange as diferenças em 
+                        funções cognitivas, de aprendizagem, atenção e 
+                        humor, e abarca condições como Autismo (TEA), 
+                        Transtorno do Déficit de Atenção e Hiperatividade 
+                        (TDAH) e Dislexia. 
+                        </p>
+                    </div>
+                    <div class="section-images">
+                        <img class="section-img" src="assets/img/dummyimg.png">
+                    </div> 
+                </div>
+                <div class="section hidden" id="autismo">
+                    <div class="section-text">
+                        <div class="section-title">Autismo (TEA)</div>
+                        <p>Autismo, ou Transtorno do Espectro Autista (TEA), é 
+uma condição neurológica que afeta o 
+desenvolvimento, manifestando-se como dificuldades 
+na comunicação e interação social, e a presença de 
+comportamentos e interesses restritos e repetitivos. A 
+expressão "espectro" indica uma ampla variação na 
+gravidade e nos sintomas, que podem ir de desafios 
+leves a quadros de maior dependência, exigindo apoio 
+ao longo da vida. 
+                        </p>
+                    </div>
+                    <div class="section-images">
+                        <img class="section-img" src="assets/img/dummyimg.png">
+                    </div> 
+                </div>
+                <div class="section hidden" id="tdah">
+                    <div class="section-text">
+                        <div class="section-title">TDAH</div>
+                        <p>TDAH é a sigla para Transtorno do Déficit de Atenção 
+com Hiperatividade, um transtorno do 
+neurodesenvolvimento que afeta a atenção, a 
+hiperatividade e a impulsividade, de maneira que pode 
+dificultar o desenvolvimento pessoal, social e 
+profissional do indivíduo. A condição pode ter um ou 
+mais sintomas, dependendo do tipo: 
+predominantemente desatento, hiperativo/impulsivo, 
+ou combinado.
+                        </p>
+                    </div>
+                    <div class="section-images">
+                        <img class="section-img" src="assets/img/dummyimg.png">
+                    </div> 
+                </div>
+                <div class="section hidden" id="dislexia">
+                    <div class="section-text">
+                        <div class="section-title">Dislexia</div>
+                        <p> A dislexia é um transtorno de aprendizagem de origem 
+neurobiológica que afeta a leitura, escrita e soletração, 
+sem relação com a inteligência da pessoa. Caracteriza
+se pela dificuldade de decodificar palavras, ou seja, de 
+identificar os sons da fala e associá-los às letras. Essa 
+condição pode levar à leitura lenta, dificuldade de 
+compreensão e problemas de ortografia, mas o 
+diagnóstico e tratamento precoces, com apoio de uma 
+equipa multidisciplinar, são essenciais para minimizar o 
+impacto na vida escolar e emocional do indivíduo. 
+                        </p>
+                    </div>
+                    <div class="section-images">
+                        <img class="section-img" src="assets/img/dummyimg.png">
+                    </div> 
+                </div>
+                <div class="section hidden" id="tod">
+                    <div class="section-text">
+                        <div class="section-title">TOD</div>
+                        <p>TOD é a sigla para Transtorno Opositivo Desafiador, um 
+distúrbio de saúde mental caracterizado por um 
+padrão persistente de comportamentos negativos, 
+hostis, desafiadores e desobedientes, geralmente 
+direcionados a figuras de autoridade, como pais e 
+professores. Embora a desobediência possa ser normal 
+em crianças, no TOD esses comportamentos são 
+intensos e frequentes, afetando o desempenho escolar 
+e o convívio social da criança.  
+                        </p>
+                    </div>
+                    <div class="section-images">
+                        <img class="section-img" src="assets/img/dummyimg.png">
+                    </div> 
+                </div>
+            </div>
         </div>
         <div class="content-box" id="depoimentos">
             Depoimentos
@@ -71,7 +175,7 @@
         </div>
     </div>
     <div class="footer">
-        <div class="copyright">2025 Copyright - Todos os direitos reservados</div>
+        <div class="copyright"><p>2025 Copyright - Todos os direitos reservados</p></div>
     </div>
 </body>
 <script src='src/script.js'></script>
