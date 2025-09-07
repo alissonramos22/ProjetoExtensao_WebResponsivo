@@ -65,3 +65,59 @@ document.querySelectorAll('.submenu-item').forEach(menu => {
     menu.addEventListener('click',()=>{func()})
 })
 
+document.getElementById('contact-email').addEventListener('change', email => {
+    /*validação gerada usando IA.
+        - estilização ajutada manualmente
+    */ 
+    const emailValue = email.target.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(emailValue)) {
+        email.target.setCustomValidity('Por favor, insira um e-mail válido.');
+        email.target.classList.add('invalid');
+    } else {
+        email.target.setCustomValidity('');
+        email.target.classList.remove('invalid');
+    }
+    email.target.reportValidity();
+})
+
+
+document.querySelectorAll('.contactform').forEach(input => {
+    if (input.id !== 'contact-email') {
+        input.addEventListener('change', () => {
+            if (input.value !== "") {
+                input.classList.remove('invalid');
+            }
+        });
+    }
+});
+
+document.getElementById('contact-btn').addEventListener('click', button => {
+    let valid=true;
+    document.querySelectorAll('.contactform').forEach(input => {
+        if (input.value == ""){
+            input.classList.add('invalid')
+        }
+    })
+    /*verifica se tem campos preenchidos errados*/
+    const invalidos=document.querySelectorAll('.invalid');
+    if (invalidos.length>0){
+        button.target.setCustomValidity('Campos obrigatórios não estão preenchidos corretamente');
+        valid=false;
+    }else{
+        button.target.setCustomValidity('');
+    }
+    button.target.reportValidity();
+
+    if (valid){
+        alert('E-mail enviado com sucesso!');
+        clearForm();
+    }
+})
+
+function clearForm(){
+    document.querySelectorAll('.contactform').forEach(input => {
+      input.value="";
+    }) 
+}
