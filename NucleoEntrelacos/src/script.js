@@ -47,7 +47,6 @@ document.querySelectorAll('.person').forEach(person => {
 })
 
 document.querySelectorAll('.submenu-item').forEach(menu => {
-
     let func = () =>{
         document.querySelectorAll('.section').forEach(section => {
             if (section.id == menu.getAttribute('section')){
